@@ -9,7 +9,7 @@ export function obtainGameList(gameFilters, gameListFunction) {
     (gameFilters.platform ? gameFilters.platform : "");
 
   axios
-    .get(`${apiURL}/games/${url_filters}`)
+    .get(`${apiURL}/games${url_filters}`)
     .then((response) => {
       gameListFunction(response.data.results.slice(0, 10));
     })

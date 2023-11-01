@@ -1,0 +1,14 @@
+@use "../../styles/partials/global" as *;
+@use "../../styles/partials/colors" as *;
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/variables" as *;
+
+.not-found {
+  flex: 1;
+  color: $playcraze-text;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 60px;
+}

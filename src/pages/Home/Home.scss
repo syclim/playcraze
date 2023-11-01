@@ -1,0 +1,44 @@
+@use "../../styles/partials/global" as *;
+@use "../../styles/partials/colors" as *;
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/variables" as *;
+
+.home {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  position: relative;
+
+  &__content {
+    display: flex;
+  }
+
+  &__selects {
+    display: flex;
+
+    @include desktop {
+      justify-content: center;
+      margin-bottom: 0.5rem;
+    }
+  }
+
+  &__select {
+    background: none;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+    @include desktop {
+      font-size: 18px;
+    }
+
+    &-list {
+      padding-right: 1rem;
+      border-right: 2px solid $playcraze-text;
+    }
+
+    &-grid {
+      padding-left: 1rem;
+    }
+  }
+}

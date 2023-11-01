@@ -1,0 +1,44 @@
+@use "../../styles/partials/global" as *;
+@use "../../styles/partials/colors" as *;
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/variables" as *;
+
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 7rem;
+
+  @include desktop {
+    height: 5rem;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__user {
+    width: 160px;
+  }
+
+  &__title {
+    display: inline;
+    min-height: 5rem;
+    color: $playcraze-text;
+    justify-self: center;
+    cursor: pointer;
+    font-size: 50px;
+  }
+
+  &__nav {
+    @include desktop {
+      position: absolute;
+      right: 1rem;
+    }
+  }
+
+  &__link {
+    color: $playcraze-text;
+    cursor: pointer;
+  }
+}

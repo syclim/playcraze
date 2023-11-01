@@ -1,0 +1,102 @@
+@use "../../styles/partials/global" as *;
+@use "../../styles/partials/colors" as *;
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/variables" as *;
+
+.filters {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+
+  &__form {
+    margin: 1rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    @include desktop {
+      margin: 0;
+    }
+  }
+
+  &__search {
+    width: 100%;
+    display: flex;
+  }
+  &__search-bar {
+    flex: 1;
+    font-size: 18px;
+    padding: 1px 3px;
+    margin-right: 5px;
+    color: $playcraze-text;
+    &::placeholder {
+      color: $playcraze-text;
+    }
+    &:focus {
+      outline: 0;
+    }
+
+    @include desktop {
+      padding: 2px 5px;
+    }
+  }
+
+  &__dropdowns {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    height: 6rem;
+    @include desktop {
+      flex-direction: row;
+      height: auto;
+      margin-bottom: 15px;
+    }
+  }
+
+  &__label {
+    font-size: 20px;
+    padding-right: 10px;
+    display: flex;
+    margin-top: 5px;
+    @include desktop {
+      flex: 1;
+    }
+    &-text {
+      margin-right: 1.5px;
+      @include desktop {
+        width: auto;
+      }
+    }
+  }
+
+  &__selects {
+    margin-left: 0.5rem;
+    padding: 2px 5px;
+    flex: 1;
+    cursor: pointer;
+    @include desktop {
+      width: 6rem;
+    }
+  }
+
+  &__button {
+    line-height: 20px;
+    background: none;
+
+    cursor: pointer;
+    border: none;
+    color: $playcraze-text;
+    font-size: 18px;
+    padding: 3.5px 5px 2px 5px;
+  }
+
+  &__game-count {
+    font-size: 20px;
+
+    @include desktop {
+      margin-top: 2rem;
+    }
+  }
+}

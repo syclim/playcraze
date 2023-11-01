@@ -1,0 +1,97 @@
+@use "../../styles/partials/global" as *;
+@use "../../styles/partials/colors" as *;
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/variables" as *;
+
+.finder {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex: 1;
+
+  @include desktop {
+    width: 710.41px;
+  }
+
+  &__loading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30rem;
+  }
+
+  &__game-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    @include desktop {
+      flex-direction: row;
+      justify-content: center;
+      margin-top: 1rem;
+    }
+  }
+
+  &__mobile-buttons {
+    margin: 1rem 0;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__back-button {
+    display: none;
+    cursor: pointer;
+    @include desktop {
+      display: block;
+      margin-right: 1rem;
+      height: 3rem;
+    }
+    &--mobile {
+      display: flex;
+      height: 2rem;
+      font-size: 18px;
+      @include desktop {
+        display: none;
+      }
+    }
+  }
+
+  &__next-button {
+    cursor: pointer;
+    display: none;
+    @include desktop {
+      display: block;
+      margin-left: 1rem;
+      height: 3rem;
+    }
+
+    &--mobile {
+      display: block;
+      height: 2rem;
+      font-size: 18px;
+      @include desktop {
+        display: none;
+      }
+    }
+  }
+
+  &__button {
+    background: none;
+    z-index: 3;
+    border: none;
+    color: $playcraze-text;
+    cursor: pointer;
+    &:active {
+      animation: heartBeat;
+      animation-duration: 1s;
+      animation-iteration-count: 1;
+    }
+    @include desktop {
+      font-size: 18px;
+    }
+
+    &--hide {
+      visibility: hidden;
+    }
+  }
+}

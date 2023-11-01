@@ -1,0 +1,55 @@
+@use "../../styles/partials/global" as *;
+@use "../../styles/partials/colors" as *;
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/variables" as *;
+
+.signup {
+  flex: 1;
+  color: $playcraze-text;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+
+  &__form {
+    margin-top: 10rem;
+    height: 15rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__form-title {
+    margin-bottom: 1rem;
+    font-size: 40px;
+  }
+
+  &__label {
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__input {
+    font-size: 18px;
+    margin-left: 0.5rem;
+    padding: 0.25rem 0.5rem;
+    color: black;
+    border: none;
+    flex: 1;
+    &--error {
+      box-shadow: 0 0 20px red;
+    }
+  }
+
+  &__button {
+    background: none;
+    width: fit-content;
+    border: none;
+    cursor: pointer;
+    font-size: 28px;
+    color: $playcraze-text;
+  }
+}
